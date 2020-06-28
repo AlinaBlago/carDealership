@@ -1,6 +1,6 @@
 package ua.com.nix.dz6.carDealership;
 
-public class Conditioner {
+public class ConditionerService {
     private boolean stateOfConditioner = true;
 
     public void workCondition(){

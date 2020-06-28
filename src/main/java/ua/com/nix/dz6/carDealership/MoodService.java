@@ -1,6 +1,6 @@
 package ua.com.nix.dz6.carDealership;
 
-public class Mood {
+public class MoodService {
     private boolean existMood = true;
 
     public void isExist(){

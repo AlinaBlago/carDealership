@@ -1,14 +1,16 @@
 package ua.com.nix.dz6.carDealership;
 
+import ua.com.nix.dz6.carDealership.data.WorkersOfCarDealership;
+
 public class DirectorOfCarDealershipService {
 
-    private Mood mood = new Mood();
-    private Conditioner conditioner = new Conditioner();
-    private DirectorOfCarDealershipResponsibility directorResponsibility = new DirectorOfCarDealershipResponsibility();
+    private MoodService moodService = new MoodService();
+    private ConditionerService conditionerService = new ConditionerService();
+    private DirectorOfCarDealershipResponsibilityService directorResponsibility = new DirectorOfCarDealershipResponsibilityService();
 
     public void startWorkday(WorkersOfCarDealership workers){
-        mood.isExist();
-        conditioner.workCondition();
+        moodService.isExist();
+        conditionerService.workCondition();
         System.out.println("Кофе-машина работает!");
         directorResponsibility.startResponsible(workers);
         work(workers);

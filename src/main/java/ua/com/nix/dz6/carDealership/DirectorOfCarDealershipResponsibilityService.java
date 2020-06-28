@@ -1,6 +1,8 @@
 package ua.com.nix.dz6.carDealership;
 
-public class DirectorOfCarDealershipResponsibility {
+import ua.com.nix.dz6.carDealership.data.WorkersOfCarDealership;
+
+public class DirectorOfCarDealershipResponsibilityService {
     public void startResponsible(WorkersOfCarDealership workers){
         System.out.println("Проводит утренний бриффинг.");
         System.out.println("Дает советы по работе.");
