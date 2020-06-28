@@ -2,9 +2,12 @@ package ua.com.nix.dz6.carDealership;
 
 public class DirectorOfCarDealership {
 
+    private Mood mood = new Mood();
+    private Conditioner conditioner = new Conditioner();
+
     public void startWorkday(WorkersOfCarDealership workers){
-        System.out.println("Настроение есть!");
-        System.out.println("Кондиционер включен!");
+        mood.isExist();
+        conditioner.workCondition();
         System.out.println("Кофе-машина работает!");
         work(workers);
         System.out.println("Проводит утренний бриффинг.");
