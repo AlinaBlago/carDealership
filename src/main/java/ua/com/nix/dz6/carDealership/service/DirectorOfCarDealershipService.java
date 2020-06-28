@@ -10,7 +10,7 @@ public class DirectorOfCarDealershipService {
 
     public void startWorkday(WorkersOfCarDealership workers){
         moodService.isExist();
-        conditionerService.workCondition();
+        conditionerService.isExist();
         System.out.println("Кофе-машина работает!");
         directorResponsibility.startResponsible(workers);
         work(workers);

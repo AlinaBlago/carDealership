@@ -5,7 +5,7 @@ import ua.com.nix.dz6.carDealership.exception.ConditionerException;
 public class ConditionerService {
     private boolean stateOfConditioner = true;
 
-    public void workCondition(){
+    public void isExist(){
         if (stateOfConditioner){
             System.out.println("Кондиционер включен.");
         } else {
