@@ -6,13 +6,13 @@ import ua.com.nix.dz6.carDealership.service.impl.MoodServiceImpl;
 
 public class DirectorOfCarDealershipService {
 
-    private MoodServiceImpl moodServiceImpl = new MoodServiceImpl();
-    private ConditionerServiceImpl conditionerServiceImpl = new ConditionerServiceImpl();
+    private MoodService moodService = new MoodServiceImpl();
+    private ConditionerService conditionerService = new ConditionerServiceImpl();
     private DirectorOfCarDealershipResponsibilityService directorResponsibility = new DirectorOfCarDealershipResponsibilityService();
 
     public void startWorkday(WorkersOfCarDealership workers){
-        moodServiceImpl.isExist();
-        conditionerServiceImpl.isExist();
+        moodService.isExist();
+        conditionerService.isExist();
         System.out.println("Кофе-машина работает!");
         directorResponsibility.startResponsible(workers);
         work(workers);
