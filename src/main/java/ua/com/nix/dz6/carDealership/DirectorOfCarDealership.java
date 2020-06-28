@@ -10,9 +10,8 @@ public class DirectorOfCarDealership {
         conditioner.workCondition();
         System.out.println("Кофе-машина работает!");
         work(workers);
-        System.out.println("Проводит утренний бриффинг.");
-        System.out.println("Дает советы по работе.");
-        System.out.println("Подводит итоги дня.");
+
+
     }
 
     public void work(WorkersOfCarDealership workers){
