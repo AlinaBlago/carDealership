@@ -2,6 +2,7 @@ package ua.com.nix.dz6.carDealership.config;
 import ua.com.nix.dz6.carDealership.config.impl.JavaApplicationConfiguration;
 import ua.com.nix.dz6.carDealership.service.ConditionerService;
 import ua.com.nix.dz6.carDealership.service.impl.WorkProcessServiceImpl;
+import ua.com.nix.dz6.carDealership.util.ResourceUtil;
 
 import java.lang.reflect.InvocationTargetException;
 import java.util.HashMap;
@@ -34,11 +35,17 @@ public class ObjectFactory {
         try {
             t = implClass.getDeclaredConstructor().newInstance();
 
+
+
         } catch (InstantiationException | IllegalAccessException | InvocationTargetException | NoSuchMethodException e) {
             throw new RuntimeException("невозможно создать класс: " + e.getClass().getName() + " " + ",msg: " + e.getMessage());
         }
 
         return t;
+    }
+
+    private <T> void initFields(Class<T> type, T t){
+        Map<String, String> map = ResourceUtil.getResource("application.properties");
     }
 }
 
