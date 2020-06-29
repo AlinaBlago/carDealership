@@ -2,8 +2,12 @@ package ua.com.nix.dz6.carDealership.config;
 
 public class ObjectFactory {
 
-    public static ObjectFactory instance;
-    public ObjectFactory() {}
+    private static ObjectFactory instance;
+    private ApplicationConfiguration config;
+
+    private ObjectFactory() {
+
+    }
 
     public static ObjectFactory getInstance(){
         if (instance == null){
