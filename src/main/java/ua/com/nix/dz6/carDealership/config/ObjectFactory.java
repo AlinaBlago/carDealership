@@ -33,14 +33,13 @@ public class ObjectFactory {
         if (type.isInterface()){
             implClass = config.getCurrentImplementation(type);
         }
-        T t = null;
+        T t;
         try {
             t = implClass.getDeclaredConstructor().newInstance();
             initFields(implClass, t);
         } catch (InstantiationException | IllegalAccessException | InvocationTargetException | NoSuchMethodException e) {
             throw new RuntimeException("невозможно создать класс: " + e.getClass().getName() + " " + ",msg: " + e.getMessage());
         }
-
         return t;
     }
 

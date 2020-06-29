@@ -20,8 +20,6 @@ public class DirectorOfCarDealershipServiceImpl implements DirectorOfCarDealersh
         directorResponsibility.startResponsible(workers);
         work(workers);
         directorResponsibility.finishResponsible();
-
-
     }
 
     public void work(WorkersOfCarDealership workers){
@@ -29,6 +27,4 @@ public class DirectorOfCarDealershipServiceImpl implements DirectorOfCarDealersh
         System.out.println("Подписывает документы.");
         System.out.println("Контролирует работу сотрудников.");
     }
-
-
 }
