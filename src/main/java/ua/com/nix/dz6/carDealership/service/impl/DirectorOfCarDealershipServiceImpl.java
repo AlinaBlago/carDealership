@@ -17,7 +17,6 @@ public class DirectorOfCarDealershipServiceImpl implements DirectorOfCarDealersh
     public void startWorkday(WorkersOfCarDealership workers){
         moodService.isExist();
         conditionerService.isExist();
-        System.out.println("Кофе-машина работает!");
         directorResponsibility.startResponsible(workers);
         work(workers);
         directorResponsibility.finishResponsible();
