@@ -1,7 +1,11 @@
 package ua.com.nix.dz6.carDealership.config;
 import ua.com.nix.dz6.carDealership.config.impl.JavaApplicationConfiguration;
+import ua.com.nix.dz6.carDealership.service.ConditionerService;
+import ua.com.nix.dz6.carDealership.service.impl.WorkProcessServiceImpl;
 
 import java.lang.reflect.InvocationTargetException;
+import java.util.HashMap;
+import java.util.Map;
 
 public class ObjectFactory {
 
@@ -10,7 +14,8 @@ public class ObjectFactory {
 
     private ObjectFactory() {
 
-        config = new JavaApplicationConfiguration("ua.com.nix.dz6.carDealership");
+        config = new JavaApplicationConfiguration("ua.com.nix.dz6.carDealership",
+                new HashMap<>(Map.of(ConditionerService.class, WorkProcessServiceImpl.class)));
     }
 
     public static ObjectFactory getInstance(){
