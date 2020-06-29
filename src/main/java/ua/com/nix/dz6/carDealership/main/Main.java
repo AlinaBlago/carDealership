@@ -1,4 +1,4 @@
-package ua.com.nix.dz6.carDealership;
+package ua.com.nix.dz6.carDealership.main;
 
 import ua.com.nix.dz6.carDealership.data.WorkersOfCarDealership;
 import ua.com.nix.dz6.carDealership.service.DirectorOfCarDealershipService;

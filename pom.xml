@@ -50,7 +50,7 @@
                     <archive>
                         <manifest>
                             <addClasspath>true</addClasspath>
-                            <mainClass>ua.com.nix.dz6.carDealership.Main</mainClass>
+                            <mainClass>ua.com.nix.dz6.carDealership.main.Main</mainClass>
                         </manifest>
                     </archive>
                 </configuration>

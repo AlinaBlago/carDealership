@@ -1,4 +1,7 @@
 package ua.com.nix.dz6.carDealership.config;
+import ua.com.nix.dz6.carDealership.config.impl.JavaApplicationConfiguration;
+
+import java.lang.reflect.InvocationTargetException;
 
 public class ObjectFactory {
 
@@ -7,6 +10,7 @@ public class ObjectFactory {
 
     private ObjectFactory() {
 
+        config = new JavaApplicationConfiguration("ua.com.nix.dz6.carDealership");
     }
 
     public static ObjectFactory getInstance(){
@@ -17,7 +21,18 @@ public class ObjectFactory {
     }
 
     public <T> T createObject(Class<T> type) {
-        return null;
+        Class<? extends T> implClass = type;
+        if (type.isInterface()){
+            implClass = config.getCurrentImplementation(type);
+        }
+        T t;
+        try {
+            t = implClass.getDeclaredConstructor().newInstance();
+        } catch (InstantiationException | IllegalAccessException | InvocationTargetException | NoSuchMethodException e) {
+            throw new RuntimeException("невозможно создать класс: " + e.getClass().getName() + " " + ",msg: " + e.getMessage());
+        }
+
+        return t;
     }
 }
 
