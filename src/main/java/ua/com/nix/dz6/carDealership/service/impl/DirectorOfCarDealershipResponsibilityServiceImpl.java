@@ -1,7 +1,8 @@
-package ua.com.nix.dz6.carDealership.service;
+package ua.com.nix.dz6.carDealership.service.impl;
 
 import ua.com.nix.dz6.carDealership.data.WorkersOfCarDealership;
 import ua.com.nix.dz6.carDealership.data.abstr.InteractingPerson;
+import ua.com.nix.dz6.carDealership.service.DirectorOfCarDealershipResponsibilityService;
 
 public class DirectorOfCarDealershipResponsibilityServiceImpl implements DirectorOfCarDealershipResponsibilityService {
 
